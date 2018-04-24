@@ -1,4 +1,4 @@
-# CS52 Workshops:  TITLE OF YOUR WORKSHOP
+# CS52 Workshops:  React Components
 
 ![](http://i.giphy.com/eUh8NINbZf9Ys.gif)
 
@@ -6,11 +6,28 @@ Brief motivation here as well as in presentation
 
 ## Overview
 
-Summary of what we're about to do.
+Ant Design (https://ant.design/docs/react/introduce) is a React UI library with components you can use in your React app.
+We will be using Ant Design to make a landing page based on https://www.airbnb.com/ (view in incognito mode).
+
+We will implement:
+* nav bar
+* carousel with pictures
+* search bar with autocomplete
+* cards 
 
 ## Setup
 
-Any necessary setup steps
+Pull in your starter
+```
+git remote add starter yourStarterName
+git pull starter master
+```
+
+Add Ant Design
+
+```
+$ yarn add antd
+```
 
 ## Step by Step
 
