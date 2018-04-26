@@ -170,9 +170,69 @@ Now you should see the autocomplete search bar!!!
 Add a carousel the same way you added the search bar.
 https://ant.design/components/carousel/
 
-Add images to your carousel; we have provided pics in the img folder. 
+Make another component to hold your carousel.
+```javascript
+import React from 'react';
+import { Carousel } from 'antd';
+
+
+function onChange(a, b, c) {
+ console.log(a, b, c);
+}
+
+const CarouselComp = (props) => {
+ return (
+   <Carousel afterChange={onChange}>
+     <div><h3>1</h3></div>
+     <div><h3>2</h3></div>
+     <div><h3>3</h3></div>
+     <div><h3>4</h3></div>
+   </Carousel>
+ );
+ // }
+};
+
+export default CarouselComp;
+```
+
+You also need the Carousel style. In your style.scss file:
+```css
+.logo {
+ height: 32px;
+ background: rgba(255,255,255,.2);
+ margin: 16px;
+}
+.ant-carousel .slick-slide {
+ text-align: center;
+ height: 100%;
+ line-height: 100%;
+ background: #364d79;
+ overflow: hidden;
+}
+.ant-carousel .slick-slide h3 {
+ color: #fff;
+}
+```
+
+
+Import your carousel into index.js
+```javascript
+import CarouselComp from './components/carousel';;
+```
+
+Make it render inside your content!
+```html
+<Content style={{ margin: '24px 16px 0' }}>
+      <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+        <CarouselComp />
+      </div>
+</Content>
+```
+
 
 ## 4. Extra Credit! :sparkles:
+Add pictures to your carousel!
+
 Add in a third component of your choice!
 https://ant.design/docs/react/introduce
 Here are some ideas:
